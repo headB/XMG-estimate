@@ -1,0 +1,15 @@
+#! /usr/bin/expect
+set timeout 3
+spawn ssh -o StrictHostKeyChecking=no admin@192.168.113.254
+expect "password:"
+send "kumanxuan@gzit\r"
+expect "<s5700>"
+send "sys\r"
+#expect "\[5700\]"
+send "dis acl all\r"
+send "         "
+send "acl 3030\r"
+send "rule 25 permit ip source 192.168.13.13 0\r"
+send "dis acl all\r"
+send "        "
+expect eof
