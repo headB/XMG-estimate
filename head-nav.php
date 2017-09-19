@@ -344,7 +344,7 @@ else
 { echo "<center><p id='123'>$title </p></center>";} ?>
 <center>
 <div class="navbar navbar-default navbar-static-top" style="width:100%;">
-	<nav  style="width: 1000px;margin:0 auto" role="navigation" >
+	<nav  style="width: 1230px;margin:0 auto" role="navigation" >
 		<div class="navbar-header">
 			<a class="navbar-brand"  href="index.php">欢迎---<?php echo $_SESSION['xz_username'];?>---登陆</a>
 		</div>
@@ -382,6 +382,13 @@ else
 				<li class="dropdown">
 					<a href="network.php?m=index" class="dropdown-toggle" >
 						网络管理
+						<b class="caret"></b>
+					</a>
+				</li>
+
+				<li class="dropdown">
+					<a href="autoPush.php" class="dropdown-toggle" >
+						ms.Lee
 						<b class="caret"></b>
 					</a>
 				</li>
