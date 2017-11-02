@@ -1,9 +1,21 @@
 <?php
 $title= 'crawler';
 include 'head-nav.php';
+include 'view/tableView.php';
 
-echo "<h1>我是一条虫，千年虫，你是一条龙，化骨龙！大家好，我是张家辉！！</h1>";
+echo "<h1>千年虫与化骨龙！</h1>";
 
+
+$title = '';
+
+$title[] = '机构名称';
+$title[] = '网址';
+
+$content[] = 'x';
+$content[] = 'y';
+$contentArray[] = $content;
+
+listTable($title,$contentArray);
 
 
 echo "</center></body></html>";
