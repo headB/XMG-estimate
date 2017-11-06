@@ -20,11 +20,13 @@ $contentArray = '';
 
 $title[] = '机构名称';
 $title[] = '网址';
+$title[] = '网站爬取规则';
 
 foreach($companyInfo['values'] as $value){
 
     $content[] = $value['name'];
     $content[] = $value['url'];
+    $content[] = strip_tags($value['urlRule']);
     $contentArray[] = $content;
     $content='';
 
@@ -44,6 +46,7 @@ $contentArray = '';
 $title[] = '归属';
 $title[] = '网站的标题';
 $title[] = '网站的关键字描述';
+$title[] = '网站部分h2内容';
 
 
 //忘记了，因为默认的数据库连接是xingzheng的，得写这条命令才可以执行连接新数据库
@@ -71,12 +74,13 @@ foreach($res['values'] as $values){
     $content[] = $tidInfoMark[$id];
     $content[] = $values['title'];
     $content[] = $values['keyword'];
+    $content[] = $values['h2'];
     $contentArray[] = $content;
     $content='';
 
 }
 
-echo "<div style='width:800px' >";
+echo "<div style='width:1000px' >";
 listTable($title,$contentArray);
 echo "</div>";
 
